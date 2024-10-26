@@ -1,13 +1,188 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  .container{
+    width: 80%;
+   
+    
+   
+  }
+  
+  .hero-items{
+    position: absolute;
+    right: 0px;
+    top: -100px;
+    z-index: -1;
+    width: 75%;
+    height: 800px;
+    background-color: #325662;
+    clip-path: polygon(100% 0, 100% 56%, 0 83%, 0 0);
+  }
+  .small-screen{
+    position: absolute;
+    right: 0px;
+    top: -100px;
+    z-index: -1;
+    width: 75%;
+    height: 800px;
+    background-color: #325662;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+  }
+  .bg-cycle{
+    background-color: #f7c17b;
+    clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
+    position: absolute;
+    
+    top: 0px;
+    left:10px;
+    z-index: -1;
+    left: -20px;
+    width: 300px;
+    height: 350px;
+
+  }
+  .cycle-img{
+    width: 300px;
+    position: absolute;
+    bottom: -30px;
+   
+    
+    
+  }
+
+  .adout-session{
+    background-image: url('../src/assets/img/bg-img.png');
+
+  }
+  .cycle-bottom{
+    position: relative;
+    margin-top: 40px;
+   
+
+  }
+  .cycle-bottom::after{
+    content: " ";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
+    width: 500px;
+    height: 400px;
+    background-color: white;
+
+  }
+  .cycle-bottom img{
+    width: 500px;
+    position: relative;
+    bottom: 0%;
+    z-index:10;
+  }
+  .input{
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    width: 500px;
+    height: 45px;
+    color: black;
+    font-size: 18px;
+  }
+  #message{
+    height: 100px;
+  }
+  .input::placeholder{
+    color: black;
+  }
+
+  @media (max-width:990px) {
+    .hero-items{
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: -1;
+      width: 75%;
+      height: 800px;
+      background-color: #325662;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      
+    }
+    .bg-cycle{
+      background-color: #f7c17b;
+      clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
+     position: absolute;
+      width: 100%;
+      height: 350px;
+    }
+    .cycle-img{
+      position: absolute;
+      width: 300px;
+     
+     
+      
+      
+    }
+    .cycle-bottom img{
+      width: 100%;
+      position: relative;
+      bottom: 0%;
+      z-index:10;
+    }
+    .cycle-bottom::after{
+      content: " ";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
+      width:100%;
+      height: 400px;
+      background-color: white;
+  
+    }
+    .input{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width:630px) {
+    .cycle-bottom::after{
+      content: " ";
+      position: absolute;
+      top: 10%;
+      left: 0%;
+      clip-path: polygon(0 0, 75% 8%, 75% 80%, 0% 100%);
+      width:100%;
+      height: 200px;
+      background-color: white;
+  
+    }
+    
+  }
+.hero-btn{
+  position: absolute;
+  right:30px;
+
 }
+.hero-btn button{
+  color: white;
+  
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 15px;
+}
+.hero-btn button:nth-child(1){
+  background-color: #f7c17b;
+}
+.hero-btn button:nth-child(2){
+  background-color: #325662;
+
+}
+
+
